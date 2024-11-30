@@ -90,6 +90,11 @@ def delete_entry(id):
         return jsonify({"error": "Entry not found"}), 404
     return jsonify({"message": "Entry deleted"}), 200
 
+@app.route("/")
+def home():
+    return "Welcome to the Diary Application API!"
+
+
 # 앱 실행
 if __name__ == "__main__":
     app.run(host="10.20.0.128", port=5000, debug=True)
